@@ -24,12 +24,12 @@ C. C. Hall at explosivegnome@yahoo.com
 CCH World Factory - GPL is a Netbeans project. If not using the Netbeans IDE, 
 you should still be able to compile using Ant:
 ```
-$ cd Path/To/PureJS
+$ cd Path/To/CCH-World-Factory-GPL
 $ ant jar
 ```
 For documentation:
 ```
-$ cd Path/To/PureJS
+$ cd Path/To/CCH-World-Factory-GPL
 $ ant javadoc
 ```
 

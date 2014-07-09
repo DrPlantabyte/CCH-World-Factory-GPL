@@ -53,5 +53,5 @@ BufferedImage map = mapper.createMapProjection(planet, size, vp, ptracker);
 Note the use of **java.util.concurrent.atomic.DoubleAdder** to provide 
 multi-threaded progress updates, allowing for a progress bar to track generation 
 of the planet (see code in 
-**hall.collin.christopher.worldgeneration.testapps.FantasyMapMaker1** for an 
+**hall/collin/christopher/worldgeneration/testapps/FantasyMapMaker1.java** for an 
 example of planet generation with a progress bar).

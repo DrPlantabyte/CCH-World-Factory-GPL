@@ -33,12 +33,9 @@ package hall.collin.christopher.worldgeneration.graphics;
 import hall.collin.christopher.worldgeneration.AbstractPlanet;
 import hall.collin.christopher.worldgeneration.SimpleRandomPlanet;
 import hall.collin.christopher.worldgeneration.biomes.StandardBiomeFactory;
+
 import java.awt.image.BufferedImage;
-import java.io.IOException;
 import java.util.concurrent.atomic.DoubleAdder;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.imageio.ImageIO;
 
 /**
  * A sinusoidal maps longitude and latitude directly to the x and y axese, but 

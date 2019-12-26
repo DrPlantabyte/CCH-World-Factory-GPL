@@ -33,12 +33,12 @@ package hall.collin.christopher.worldgeneration.testapps;
 import hall.collin.christopher.worldgeneration.AbstractPlanet;
 import hall.collin.christopher.worldgeneration.TectonicHydrologyPlanet;
 import hall.collin.christopher.worldgeneration.biomes.StandardBiomeFactory;
-import hall.collin.christopher.worldgeneration.graphics.MercatorMapProjector;
-import hall.collin.christopher.worldgeneration.graphics.PlanetPainter;
-import hall.collin.christopher.worldgeneration.graphics.SectorMapProjector;
-import hall.collin.christopher.worldgeneration.graphics.VegetationPainter;
+import hall.collin.christopher.worldgeneration.graphics.*;
 import hall.collin.christopher.worldgeneration.util.GUI;
-import java.awt.Dimension;
+
+import javax.imageio.ImageIO;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -46,12 +46,7 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
-import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.DoubleAdder;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.imageio.ImageIO;
-import javax.swing.*;
 
 /**
  * This program generate a procedural planet from a seed provided by the user 
@@ -245,12 +240,16 @@ public class FantasyMapMaker1 {
 			try {
 				ImageIO.write(vimg, "png", vf);
 			} catch (IOException ex) {
-				Logger.getLogger(FantasyMapMaker1.class.getName()).log(Level.SEVERE, null, ex);
+				
+				ex.printStackTrace(System.err);
+				//Logger.getLogger(FantasyMapMaker1.class.getName()).log(Level.SEVERE, null, ex);
 			}
 			try {
 				ImageIO.write(bimg, "png", bf);
 			} catch (IOException ex) {
-				Logger.getLogger(FantasyMapMaker1.class.getName()).log(Level.SEVERE, null, ex);
+				
+				ex.printStackTrace(System.err);
+				//Logger.getLogger(FantasyMapMaker1.class.getName()).log(Level.SEVERE, null, ex);
 			}
 			System.exit(0);
 		}
@@ -265,7 +264,8 @@ public class FantasyMapMaker1 {
 		try {
 			ImageIO.write(bimg, "png", dest);
 		} catch (IOException ex) {
-			Logger.getLogger(FantasyMapMaker1.class.getName()).log(Level.SEVERE, null, ex);
+			ex.printStackTrace(System.err);
+			//Logger.getLogger(FantasyMapMaker1.class.getName()).log(Level.SEVERE, null, ex);
 		}
 	}
 }
